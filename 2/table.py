@@ -24,7 +24,7 @@ class SeleniumTestCase(TestCase):
         submit_button.click()
 
     def test_table_creation_1(self):
-        self.driver.get('file:///home/thepkms/PycharmProjects/se-selenium/table.html')
+        self.driver.get('file:///home/thepkms/PycharmProjects/se-selenium/2/table.html')
 
         self.enter_row(10)
         self.enter_column(10)
@@ -37,7 +37,7 @@ class SeleniumTestCase(TestCase):
         sleep(2)
 
     def test_table_creation_2(self):
-        self.driver.get('file:///home/thepkms/PycharmProjects/se-selenium/table.html')
+        self.driver.get('file:///home/thepkms/PycharmProjects/se-selenium/2/table.html')
 
         self.enter_row(5)
         self.enter_column(8)
