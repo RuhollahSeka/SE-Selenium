@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Selenium-Table</title>
+    <style>
+        table, td {
+            border: 1px solid black;
+        }
+
+        td {
+            width: 10px;
+            height: 10px;
+        }
+    </style>
+    <script>
+        function createTable() {
+            const rowElement = document.getElementById("row");
+            const rowNum = rowElement.valueAsNumber;
+
+            const columnElement = document.getElementById("column");
+            const columnNum = columnElement.valueAsNumber;
+            const table = document.createElement("TABLE");
+            console.log(rowNum);
+            console.log(columnNum);
+
+            for (var i = 0; i < rowNum; i++) {
+                const row = table.insertRow(0);
+                for (var j = 0; j < columnNum; j++) {
+                    row.insertCell(0)
+                }
+            }
+            const destDiv = document.getElementById("div-2");
+            destDiv.appendChild(table);
+            const firstDiv = document.getElementById("div-1");
+            firstDiv.style.display = "none";
+        }
+    </script>
+</head>
+<body>
+    <div id="div-1">
+        <label for="row">Row</label>
+        <input id="row" type="number">
+
+        <label for="column">Column</label>
+        <input id="column" type="number">
+
+        <button id="submit" onclick="createTable()">Submit</button>
+    </div>
+
+    <div id="div-2"></div>
+</body>
+</html>
